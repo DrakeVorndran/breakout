@@ -187,7 +187,7 @@ function brickCollision(){
         for(let r=0; r<brickRowCount; r++) {
             let b = bricks[c][r];
             if(b.status===1){
-                if(ballx+ballRadius > b.x && ballx+ballRadius < b.x+brickWidth && bally+ballRadius > b.y && bally-ballRadius < b.y+brickHeight) {
+                if(ballx+ballRadius > b.x && ballx-ballRadius < b.x+brickWidth && bally+ballRadius > b.y && bally-ballRadius < b.y+brickHeight) {
                     ballDy = -ballDy;
                     b.status=0;
                     score++;
